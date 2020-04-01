@@ -1,6 +1,12 @@
 import React from "react";
 
-export function NamesList({ names, searchValue, shortList, setShortList }) {
+import { useShortList } from "../context/short-list";
+import { useSearch } from "../context/search";
+
+export function NamesList({ names }) {
+  const { shortList, setShortList } = useShortList();
+  const { searchValue } = useSearch();
+
   // We want to only show a list of names that...
   // 1. are not currently in the short list
   // 2. are matching the current search string

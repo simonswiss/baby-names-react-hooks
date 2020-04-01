@@ -1,19 +1,23 @@
 import React, { Fragment } from "react";
 
-export function ShortList({ names, shortList, setShortList }) {
+import { useShortList } from "../context/short-list";
+
+export function ShortList({ names }) {
+  const { shortList } = useShortList();
   const hasFavourites = shortList.length > 0;
+
   return (
     <div className="favourites">
       <h4>{hasFavourites ? "Your shortlist: " : "Click on a name to shortlist it..."}</h4>
-      {hasFavourites && (
-        <ShortListNames names={names} shortList={shortList} setShortList={setShortList} />
-      )}
+      {hasFavourites && <ShortListNames names={names} shortList={shortList} />}
     </div>
   );
 }
 
 // Implementation component
-function ShortListNames({ names, shortList, setShortList }) {
+function ShortListNames({ names }) {
+  const { shortList, setShortList } = useShortList();
+
   return (
     <Fragment>
       <ul>

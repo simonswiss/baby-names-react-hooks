@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
-export function Search({ searchValue, setSearchValue }) {
+import { useSearch } from "../context/search";
+
+export function Search() {
+  const { searchValue, setSearchValue } = useSearch();
+  const inputRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
   return (
     <header>
-      <form>
-        <input
-          type="text"
-          placeholder="Type to filter.."
-          value={searchValue}
-          onChange={event => setSearchValue(event.target.value)}
-        />
-      </form>
+      <input
+        ref={inputRef}
+        type="text"
+        placeholder="Type to filter.."
+        value={searchValue}
+        onChange={event => setSearchValue(event.target.value)}
+      />
     </header>
   );
 }
