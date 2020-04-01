@@ -87,23 +87,20 @@ li.boy:hover {
 
 /* ##### Footer ##### */
 .credit {
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   color: #b3b3b3;
 }
 .credit a {
   color: #3498db;
 }
 button {
-  background: #d7d7d7;
-  color: #3b3b3b;
-  padding: 0.6rem 1rem;
-  font-size: 0.8rem;
-  border: solid 1px #c7c7c7;
-  margin: 1rem 0;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
+  color: #247bb5;
+  border: none;
+  background: none;
   outline: none;
+  border-bottom: solid 1px;
+  padding: 0.25rem 0;
 }
 button:hover {
-  background: #ddd;
+  border-color: transparent;
 }

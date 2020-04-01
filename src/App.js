@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import { Footer } from "./components/footer";
 import { NamesList } from "./components/names-list";
 import { Search } from "./components/search";
 import { ShortList } from "./components/short-list";
@@ -25,7 +26,9 @@ function App() {
           shortList={shortList}
           setShortList={setShortList}
         />
+        {searchValue && <button onClick={() => setSearchValue("")}>clear search</button>}
       </main>
+      <Footer />
     </div>
   );
 }
