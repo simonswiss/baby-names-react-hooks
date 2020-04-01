@@ -15,6 +15,7 @@ export function ShortList({ names }) {
 }
 
 // Implementation component
+// ------------------------------
 function ShortListNames({ names }) {
   const { shortList, setShortList } = useShortList();
 
