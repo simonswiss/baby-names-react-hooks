@@ -46,6 +46,6 @@ In this lesson, we amend an already filtered list of names with an additional fi
 
 In this lesson, we approach the concept of "prop drilling" and see how it can lead to maintenance pitfalls. By leveraging the Context API, we implement a context provider for our "search" and "shortlist" states. We then access that context where needed via the `useContext` hook.
 
-### 13. Improve developer experience for accessing context with a custom React hoook.
+### 13. Improve developer experience for accessing context with a custom React hoook
 
 In this lesson, we create a custom hook that wraps the `useContext` hook and returns its value, as well as more useful error messaging if a context provider is missing. This simple addition brings very elegant ergonomics to access context from any component.
