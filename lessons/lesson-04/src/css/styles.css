@@ -21,6 +21,11 @@ input[type="text"] {
   padding: 0 2rem;
   width: calc(100% - 2rem);
   height: 4rem;
+  transition: box-shadow 0.1s;
+}
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 0 1px 3px rgb(154, 196, 222);
 }
 
 /* ##### NamesList ##### */

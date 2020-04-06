@@ -114,3 +114,23 @@
 - let's call a function called "handleChange" when this happens
 - create `function handleChange(event)` which takes an event, and we will `setSearchValue(event.target.value)`
 - We have now taken over control of the input field state, as you can see in the `pre` tag.
+- We can cleanup teh pre tag here, don't need it anymore
+
+### LESSON_06
+
+- currently, the user has to click in input field before typing a search
+- search sounds like a fairly common way to use the app
+- would be nice to have the input field focused on load, so user can just start typing.
+- to do this, we need to get hold of a DOM element - the input field - and keep a reference of it
+- we'll use another React hook for this - useRef
+- we will also import { useRef } from React
+- we will create an `inputRef` - `const inputRef = useRef()`
+- and add a `ref` prop to our input, with the value of `inputRef`
+- console.log inputRef and show it has a `current` property which is the input
+- we want to focus that input immediately when the page is loaded
+- for that we'll use yet another React hook - useEffect
+- import useEffect from react
+- useEffect, which takes a function..
+- and we'll do `inputRef.current.focus()`
+- we want this to only happen once, so we pass an empty array of dependencies to useEffect, which means it won't run again until the component unmounts.
+- now, when we reload the page, the input field is focused, and we can start typing right away!
