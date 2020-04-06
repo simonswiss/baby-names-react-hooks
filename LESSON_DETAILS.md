@@ -140,3 +140,19 @@
 - The state value we are holding in the `Search` component needs to also be available in the `NamesList` component
 - One way to share a piece of state across multiple components is to "elevate" it to a common parent component.
 - In our case, we're going to elevate the `searchValue` state to the App.js component, which is the common parent.
+- Let's import `useState` in our App.js file, and define our `searchValue` and `setSearchValue` here in the App component. This App component will now be responsible to keep track of the search field value. The next step will be to pass this state to the children component
+
+### LESSON_08
+
+- We have a `searchValue` state here, and we need to share it with the `Search` and `NamesList` components.
+- The way you pass state down in React is via props.
+- Let's start with the `Search` component
+- We will add a searchValue props, and a setSearchValue prop
+- Now, in the search component, we can receive these props, and use them instead of the local state defined earlier
+- Let's remove the useState hook call and import.
+- The input field still works, but the state for this search value now lives in the App component.
+- Let's handle the NamesList component next
+- This one only needs the value, not the updater: `searchValue equals searchValue`
+- in the `names-list` component, we can now receive this prop.
+- Let's verify that we can read the value with a quick extra <li> tag
+- it works!
