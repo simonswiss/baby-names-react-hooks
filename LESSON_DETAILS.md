@@ -156,3 +156,13 @@
 - in the `names-list` component, we can now receive this prop.
 - Let's verify that we can read the value with a quick extra <li> tag
 - it works!
+
+### LESSON_09
+
+- Let's filter through the names array with the Array.filter() method
+- names.filter() and for each entry, we'll check if the entry name includes the search value, and skip the entry otherwise.
+- now I can use this new `filteredNames` array in my Array.map() here, let's give it a try
+- it works, but... as you can see, if I search for Logan with a lowercase L, it won't match the string.
+- We probably don't want that to work this way
+- To mitigate this, we can normalize the strings to lowercase on both sides
+- now serch with both uppercase or lowercase match. Nice!
