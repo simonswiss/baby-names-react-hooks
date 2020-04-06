@@ -78,7 +78,39 @@
 - The app still works, but we have now extracted our JSX to a component.
 - Explain we'll do this for other components, and our `App.js` will be a clean, declarative description of the app.
 - Add comments for:
-  - // <Search />
-  - // <ShortList />
-  - // <NamesList />
-  - // <Footer />
+  /\*
+  <App>
+  <Search />
+  <ShortList />
+  <NamesList />
+    <Footer />
+  </App>
+  */
+
+### LESSON_05
+
+- look at final app, demo search component
+- create a new component file, `search.js`
+- export a function called Search, return an input type text
+- import it in `App.js` and add it in render
+- remind need for single parent level component by not adding fragment
+- show error
+- add fragment
+- back in component, add "header" wrapper for styling
+- type in field. Discuss "uncontrolled component", where state lives in DOM.
+- In react, most of the time, we want React to take control of the state.
+- DOM should not be source of truth
+- add a <pre> tag that says `search value: xxx`
+- we want React to keep that state value, so it updates when user types
+- To control the state in React, let's inport the "useState()" hook
+- useState gives us an array with two things: a state value, and an updater. You can name them as you please, but a good convention is that if your state value is named "thing", then the updater is called "setThing".
+- in our case, let's go with `[searchValue, setSearchValue]`
+- we can set the default value in the useState call
+- as an example, let's use "simon" here for now
+- add a "value" prop to the input field set to `searchValue`, and update the `<pre>` tag to use `searchValue` as well
+- show that it works - our state value is in input - but now we cannot change it when typing
+- we are using the value, but not the updater.
+- add `onChange` prop. `onChange` is a SyntheticEvent, which behaves very similarly to the onchange browser event
+- let's call a function called "handleChange" when this happens
+- create `function handleChange(event)` which takes an event, and we will `setSearchValue(event.target.value)`
+- We have now taken over control of the input field state, as you can see in the `pre` tag.
