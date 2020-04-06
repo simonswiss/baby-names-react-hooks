@@ -134,3 +134,9 @@
 - and we'll do `inputRef.current.focus()`
 - we want this to only happen once, so we pass an empty array of dependencies to useEffect, which means it won't run again until the component unmounts.
 - now, when we reload the page, the input field is focused, and we can start typing right away!
+
+### LESSON_07
+
+- The state value we are holding in the `Search` component needs to also be available in the `NamesList` component
+- One way to share a piece of state across multiple components is to "elevate" it to a common parent component.
+- In our case, we're going to elevate the `searchValue` state to the App.js component, which is the common parent.
