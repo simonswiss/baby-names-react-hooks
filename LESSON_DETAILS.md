@@ -61,3 +61,24 @@
 - remove the console log. Done!
 
 ### LESSON_04
+
+- Open the final app in browser
+- Take a screenshot and open in Skitch/figma
+- Identify UI components that could be broken down
+- Draw rectangles around it
+- Go back to the app in its current state
+- Let's build a component for the list of names!
+- in the `/src` folder, create a `components` folder
+- create a `names-list.js` file in there
+- import react
+- also `import { names } from "../data"` (be sure to update the import path!)
+- export a function called NamesList
+- grab the JSX from `App.js` and copy it in there
+- remove the JSX from `App.js`, import `NamesList` instead
+- The app still works, but we have now extracted our JSX to a component.
+- Explain we'll do this for other components, and our `App.js` will be a clean, declarative description of the app.
+- Add comments for:
+  - // <Search />
+  - // <ShortList />
+  - // <NamesList />
+  - // <Footer />

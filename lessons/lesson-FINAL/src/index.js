@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "normalize-css";
 
 import "./styles/styles.css";
-import App from "./app";
+import App from "./App";
 import { ShortListProvider } from "./context/short-list";
 import { SearchProvider } from "./context/search";
 
