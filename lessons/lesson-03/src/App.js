@@ -7,7 +7,7 @@ function App() {
     <ul>
       {names.map(entry => (
         <li className={entry.sex} key={entry.id}>
-          {entry.name}
+          <button>{entry.name}</button>
         </li>
       ))}
     </ul>

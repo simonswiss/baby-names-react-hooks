@@ -1,13 +1,13 @@
 import React, { Fragment } from "react";
 
-import { NamesList } from "./components/names-list";
+import { NamePicker } from "./components/name-picker";
 import { Search } from "./components/search";
 
 /*
 <App>
   <Search />
   <ShortList />
-  <NamesList />
+  <NamePicker />
   <Footer />
 </App>
 */
@@ -16,7 +16,7 @@ function App() {
   return (
     <Fragment>
       <Search />
-      <NamesList />
+      <NamePicker />
     </Fragment>
   );
 }

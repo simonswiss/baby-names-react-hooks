@@ -40,7 +40,7 @@ In this lesson, we implement a "shortlisting" functionality to allow users to cl
 
 ### 11. Make components reusable in React with a flexible props API
 
-In this lesson, we abstract a single `name` item into its own component, and consider what props it should receive to make it reusable in different use cases.
+In this lesson, we abstract a reusable `NamesList` component, that will render the same JSX in two different scenarios. We keep the logic of the onClick event outside of the component, and pass it as a callback prop.
 
 ### 12. Chain Array methods in JavaScript to break down complex Array manipulation
 

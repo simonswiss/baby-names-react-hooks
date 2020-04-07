@@ -2,12 +2,12 @@ import React from "react";
 
 import { names } from "../data";
 
-export function NamesList() {
+export function NamePicker() {
   return (
     <ul>
       {names.map(entry => (
         <li className={entry.sex} key={entry.id}>
-          {entry.name}
+          <button>{entry.name}</button>
         </li>
       ))}
     </ul>

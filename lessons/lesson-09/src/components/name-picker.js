@@ -2,7 +2,7 @@ import React from "react";
 
 import { names } from "../data";
 
-export function NamesList({ searchValue }) {
+export function NamePicker({ searchValue }) {
   const filteredNames = names.filter(entry =>
     entry.name.toLowerCase().includes(searchValue.toLowerCase())
   );
@@ -11,7 +11,7 @@ export function NamesList({ searchValue }) {
     <ul>
       {filteredNames.map(entry => (
         <li className={entry.sex} key={entry.id}>
-          {entry.name}
+          <button>{entry.name}</button>
         </li>
       ))}
     </ul>

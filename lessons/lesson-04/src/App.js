@@ -1,18 +1,18 @@
 import React from "react";
 
-import { NamesList } from "./components/names-list";
+import { NamePicker } from "./components/name-picker";
 
 /*
 <App>
   <Search />
   <ShortList />
-  <NamesList />
+  <NamePicker />
   <Footer />
 </App>
 */
 
 function App() {
-  return <NamesList />;
+  return <NamePicker />;
 }
 
 export default App;
