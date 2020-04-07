@@ -3,7 +3,7 @@ data source:
 https://www.yahoo.com/news/atticus-tops-baby-names-2015-124073377716.html
 */
 
-export const data = [
+export const names = [
   {
     id: 0,
     name: "Aria",

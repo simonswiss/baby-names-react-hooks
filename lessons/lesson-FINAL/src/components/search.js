@@ -10,14 +10,17 @@ export function Search() {
     inputRef.current.focus();
   }, []);
 
+  function handleChange(event) {
+    setSearchValue(event.target.value);
+  }
   return (
     <header>
       <input
-        ref={inputRef}
         type="text"
-        placeholder="Type to filter.."
+        placeholder="Type to filter..."
         value={searchValue}
-        onChange={event => setSearchValue(event.target.value)}
+        onChange={handleChange}
+        ref={inputRef}
       />
     </header>
   );

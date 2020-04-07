@@ -1,8 +1,7 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 const ShortListContext = createContext();
 
-// Context provider
 export function ShortListProvider({ children }) {
   const [shortList, setShortList] = useState([]);
   return (
@@ -12,13 +11,11 @@ export function ShortListProvider({ children }) {
   );
 }
 
-// Consumer hook
 export function useShortList() {
   const context = useContext(ShortListContext);
+
   if (!context) {
-    throw new Error(
-      "You need to wrap your component in a <ShortListProvider> to access the ShortListContext."
-    );
+    throw new Error("Looks like you forgot to add a <ShortListProvider> wrapper!");
   }
 
   return context;

@@ -1,25 +1,29 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import { Footer } from "./components/footer";
-import { NamesList } from "./components/names-list";
+import { NamePicker } from "./components/name-picker";
 import { Search } from "./components/search";
 import { ShortList } from "./components/short-list";
-import { useSearch } from "./context/search";
-import { data } from "./data";
+
+/*
+<App>
+  <Search />
+  <ShortList />
+  <NamePicker />
+  <Footer />
+</App>
+*/
 
 function App() {
-  const { searchValue, setSearchValue } = useSearch();
-
   return (
-    <div>
+    <Fragment>
       <Search />
       <main>
-        {searchValue && <button onClick={() => setSearchValue("")}>clear search</button>}
-        <ShortList names={data} />
-        <NamesList names={data} />
+        <ShortList />
+        <NamePicker />
       </main>
       <Footer />
-    </div>
+    </Fragment>
   );
 }
 

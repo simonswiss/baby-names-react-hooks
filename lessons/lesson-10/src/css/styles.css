@@ -36,7 +36,6 @@ li {
   position: relative;
   list-style: none;
   display: inline-block;
-  padding: 0.25rem 0.75rem;
   margin: 2px;
   border-radius: 3px;
 }
@@ -60,7 +59,8 @@ li.boy:hover {
 li > button {
   border: none;
   background: transparent;
-  padding: 0;
+  display: block;
+  padding: 0.25rem 0.75rem;
   color: inherit;
 }
 li > button:focus,

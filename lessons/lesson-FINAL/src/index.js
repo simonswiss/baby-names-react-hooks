@@ -1,8 +1,12 @@
+// React
 import React from "react";
 import ReactDOM from "react-dom";
-import "normalize-css";
 
-import "./styles/styles.css";
+// CSS
+import "normalize-css";
+import "./css/styles.css";
+
+// Components
 import App from "./App";
 import { ShortListProvider } from "./context/short-list";
 import { SearchProvider } from "./context/search";

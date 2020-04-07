@@ -1,8 +1,7 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 const SearchContext = createContext();
 
-// Context provider
 export function SearchProvider({ children }) {
   const [searchValue, setSearchValue] = useState("");
   return (
@@ -12,14 +11,11 @@ export function SearchProvider({ children }) {
   );
 }
 
-// Consumer hook
 export function useSearch() {
   const context = useContext(SearchContext);
-  if (!context) {
-    throw new Error(
-      "You need to wrap your component in a <SearchProvider> to access the SearchContext."
-    );
-  }
 
+  if (!context) {
+    throw new Error("Looks like you forgot to add a <SearchProvider> wrapper!");
+  }
   return context;
 }
