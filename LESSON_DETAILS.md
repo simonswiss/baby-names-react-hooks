@@ -243,3 +243,10 @@
 - Soo.. our add to and remove from shortlist works, but we still have that problem where the same name can get added more than once, which then leads to issues with duplicated React keys. We should fix that!
 
 ### LESSON_12
+
+- If we look at our `NamePicker` component, we can see that the `filteredNamesList` is already, well.. filtered.
+- A nice thing about Array methods is you can chain them together, allowing you to perform transformations in a sequence.
+- For example, here, we'll want to take our list of names, after it's been filtered by search string, and chain another .filter(), which will check if the shortList includes the entry id. We want to only keep the entries that are **not** in the shortlist.
+- That way, when an entry is shortlisted, it gets removed from the list of names to pick from, and that solves our problem!
+
+### LESSON_13

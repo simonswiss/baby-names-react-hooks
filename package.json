@@ -16,7 +16,8 @@
     "start:10": "cd lessons/lesson-10 && yarn start",
     "start:11": "cd lessons/lesson-11 && yarn start",
     "start:12": "cd lessons/lesson-12 && yarn start",
-    "start:13": "cd lessons/lesson-13 && yarn start"
+    "start:13": "cd lessons/lesson-13 && yarn start",
+    "start:14": "cd lessons/lesson-14 && yarn start"
   },
   "workspaces": [
     "lessons/*"
