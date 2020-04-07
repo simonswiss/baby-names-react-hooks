@@ -38,14 +38,18 @@ In this lesson, we use application state to filter a list of names from a JavaSc
 
 In this lesson, we implement a "shortlisting" functionality to allow users to click on a name to add it to their shortlist. We use the `useState` hook to maintain that shortlist, and use the update function it provides to amend the list when a user clicks on a name
 
-### 11. Chain Array methods in JavaScript to break down complex Array manipulation
+### 11. Make components reusable in React with a flexible props API
+
+In this lesson, we abstract a single `name` item into its own component, and consider what props it should receive to make it reusable in different use cases.
+
+### 12. Chain Array methods in JavaScript to break down complex Array manipulation
 
 In this lesson, we amend an already filtered list of names with an additional filter step. We chain an additional `Array.filter()` method to the existing chain. This filter step factors in additional app state, so we can ommit shortlisted names from our displayed list.
 
-### 12. Reduce "prop drilling" in React with the Context API
+### 13. Reduce "prop drilling" in React with the Context API
 
 In this lesson, we approach the concept of "prop drilling" and see how it can lead to maintenance pitfalls. By leveraging the Context API, we implement a context provider for our "search" and "shortlist" states. We then access that context where needed via the `useContext` hook.
 
-### 13. Improve developer experience for accessing context with a custom React hoook
+### 14. Improve developer experience for accessing context with a custom React hoook
 
 In this lesson, we create a custom hook that wraps the `useContext` hook and returns its value, as well as more useful error messaging if a context provider is missing. This simple addition brings very elegant ergonomics to access context from any component.

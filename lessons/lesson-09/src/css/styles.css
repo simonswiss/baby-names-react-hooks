@@ -57,6 +57,12 @@ li.boy {
 li.boy:hover {
   background: #8bc4ea;
 }
+li > button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
 
 /* ##### Favourites ##### */
 .favourites li:hover:before {
@@ -98,7 +104,7 @@ li.boy:hover {
 .credit a {
   color: #3498db;
 }
-button {
+button.reset {
   color: #247bb5;
   border: none;
   background: none;
@@ -106,6 +112,6 @@ button {
   border-bottom: solid 1px;
   padding: 0.1rem 0;
 }
-button:hover {
+button.reset:hover {
   border-color: transparent;
 }

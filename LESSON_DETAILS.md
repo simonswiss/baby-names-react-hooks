@@ -166,3 +166,40 @@
 - We probably don't want that to work this way
 - To mitigate this, we can normalize the strings to lowercase on both sides
 - now serch with both uppercase or lowercase match. Nice!
+
+### LESSON_10
+
+- Look at final app for the shortlist functionality
+- We'll want another piece of state that maintains a "shortlist"
+- Since it will be shared beteen the `NamesList` and the `ShortList`, we'll maintain this state in our `App` component.
+- I'll create a new piece of state - `const [shortList, setShortList] = useState()
+- This state will be an array of `ids` for the `names`, and we'll default this to an empty array.
+- We'll pass the state value and the updater to the `NamesList` component via props.
+- Let's receive these props in `NamesList`.
+- We'll also create a new component. Let's make a new file in `/components` called `short-list.js`
+- We'll import React, and export a function called `ShortList()`
+- for now, we'll have some placeholder text here
+- I'll go and import this file in our App, import { ShortList } from './components/short-list'
+- and place it here between the `Search` and the `NamesList`
+- We'll also pass the shortlist state to this component.
+- Let's go in our shortlist component, and receive the props.
+- As a test, let's output the value of the `shortList` array in a `<pre>` tag.
+- `JSON.stringify(shortList)`
+- As expected, we have an empty array. Now, we want to add a name ID to the shortlist when a user clicks on it.
+- in our `NamesList`, we'll listen to the `click` event with an `onClick` prop.
+- We COULD put the onClick on the `li` item, and it would totally work, but...
+- please let's be semantically correct, and use a `button` element for that!
+- I will wrap the `entry name` in a `button` tag, and `onClick`.. we will call an `addToShortList` method
+- let's create it up here - function `addToShortList`
+- for now, let's try and log the name ID for the name we click.
+- to do so, I'll pass the prop as a function which passes the id as an argument.
+- now, let's receive that parameter, and log it in the function
+- try it, show it works.
+- so, now let's remove the console.log, and instead, when a user clicks on a name, we'll add the ID to our shortlist array
+- We'll call `setShortList` here, and use the spread syntax to create an array that takes the existing shortlist, dot dot dot shortList, as well as the new name ID.
+- now, when we click on names, we can see their id added to the shortlist
+- there is an obvious problem though - if we click again on the same name, it gets added to the shortlist again.
+- we could check if that ID exists in the array before adding it, but we'll handle this issue otherwise in this app: when a name is clicked on the NamesList, it should disappear from the list, and therefore can't be clicked again :)
+- OK, let's display actual names instead of the shortlist array here.
+- But wait a minute - it looks like we want to reuse the JSX from our `NamesList`, but perhaps with slightly different props - for example a different `onClick` behaviour..
+- Sounds like it's time to create a new, reusable component!

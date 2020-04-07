@@ -1,0 +1,24 @@
+{
+  "name": "baby-names-with-react-hooks",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "cd lessons/lesson-FINAL && yarn start",
+    "start:01": "cd lessons/lesson-01 && yarn start",
+    "start:02": "cd lessons/lesson-02 && yarn start",
+    "start:03": "cd lessons/lesson-03 && yarn start",
+    "start:04": "cd lessons/lesson-04 && yarn start",
+    "start:05": "cd lessons/lesson-05 && yarn start",
+    "start:06": "cd lessons/lesson-06 && yarn start",
+    "start:07": "cd lessons/lesson-07 && yarn start",
+    "start:08": "cd lessons/lesson-08 && yarn start",
+    "start:09": "cd lessons/lesson-09 && yarn start",
+    "start:10": "cd lessons/lesson-10 && yarn start",
+    "start:11": "cd lessons/lesson-11 && yarn start",
+    "start:12": "cd lessons/lesson-12 && yarn start",
+    "start:13": "cd lessons/lesson-13 && yarn start"
+  },
+  "workspaces": [
+    "lessons/*"
+  ]
+}
