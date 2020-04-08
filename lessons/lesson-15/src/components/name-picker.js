@@ -1,13 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { NamesList } from "./names-list";
-import { useNames } from "../providers/names";
-import { useAppState } from "../providers/app-state";
+import { NamesContext } from "../providers/names";
 
-export function NamePicker() {
-  const names = useNames();
-  const { searchValue, shortList, setShortList } = useAppState();
-
+export function NamePicker({ searchValue, shortList, setShortList }) {
+  const names = useContext(NamesContext);
   const filteredNames = names
     .filter(entry =>
       entry.name.toLowerCase().includes(searchValue.toLowerCase())

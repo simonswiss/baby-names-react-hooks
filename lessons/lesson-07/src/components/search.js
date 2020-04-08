@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
-export function Search({ searchValue, setSearchValue }) {
+export function Search() {
+  const [searchValue, setSearchValue] = useState("");
   const inputRef = useRef();
 
   useEffect(() => {

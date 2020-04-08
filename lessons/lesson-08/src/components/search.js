@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export function Search({ searchValue, setSearchValue }) {
   const inputRef = useRef();

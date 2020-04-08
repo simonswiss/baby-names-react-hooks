@@ -1,10 +1,15 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
+
+import { useAppState } from "../providers/app-state";
 
 export function Search() {
-  const [searchValue, setSearchValue] = useState("");
   const inputRef = useRef();
+  const { searchValue, setSearchValue } = useAppState();
 
-  console.log({ inputRef });
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
   function handleChange(event) {
     setSearchValue(event.target.value);
   }

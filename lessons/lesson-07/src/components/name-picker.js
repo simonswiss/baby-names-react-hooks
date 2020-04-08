@@ -1,6 +1,6 @@
 import React from "react";
 
-export function NamePicker({ names, searchValue }) {
+export function NamePicker({ names }) {
   return (
     <ul>
       {names.map(entry => (

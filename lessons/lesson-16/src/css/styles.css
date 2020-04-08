@@ -1,0 +1,143 @@
+/* ##### Base ##### */
+* {
+  box-sizing: border-box;
+}
+main {
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+/* ##### Search ##### */
+header {
+  background: #3498db;
+  margin-bottom: 2rem;
+}
+input[type="text"] {
+  margin: 1rem;
+  background: #fff;
+  font-size: 1.3rem;
+  border: none;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  padding: 0 2rem;
+  width: calc(100% - 2rem);
+  height: 4rem;
+  transition: box-shadow 0.1s;
+}
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 0 1px 3px rgb(154, 196, 222);
+}
+
+/* ##### NamesList ##### */
+ul {
+  padding: 0;
+}
+li {
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  margin: 2px;
+  border-radius: 3px;
+}
+li:hover {
+  cursor: pointer;
+}
+li.girl {
+  background: #ffc6e5;
+  color: #940050;
+}
+li.girl:hover {
+  background: #ffadd9;
+}
+li.boy {
+  background: #a0cfee;
+  color: #16527a;
+}
+li.boy:hover {
+  background: #8bc4ea;
+}
+li > button {
+  border: none;
+  background: transparent;
+  display: block;
+  padding: 0.25rem 0.75rem;
+  color: inherit;
+}
+li > button:focus,
+li > button:active {
+  outline: none;
+}
+
+/* ##### Shortlist ##### */
+.short-list li:hover:before {
+  content: "\00D7";
+  position: absolute;
+  top: -0.5rem;
+  right: -0.3rem;
+  width: 1rem;
+  height: 1rem;
+  z-index: 2;
+  text-align: center;
+  line-height: 1;
+  font-size: 0.9rem;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: #ff6347;
+  border: solid 2px #fff;
+  color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.short-list h2 {
+  padding: 0;
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin: 0;
+  color: #b3b3b3;
+}
+.short-list hr {
+  border-bottom: 0;
+  border-top: solid 1px #e6e6e6;
+  margin: 1rem 0;
+}
+
+/* ##### Reset button ##### */
+button.reset-search {
+  color: #3f6073;
+  background: #e9f2f8;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 99999px;
+  outline: none;
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+}
+button.reset-search:hover {
+  background: #dae8f1;
+}
+
+/* ##### Footer ##### */
+.credit {
+  padding: 0 1rem 2rem;
+  color: #b3b3b3;
+}
+.credit a {
+  color: #3498db;
+}
+
+/* ##### Media queries ##### */
+@media screen and (min-width: 640px) {
+  main {
+    padding: 0 2rem;
+  }
+  .credit {
+    padding: 0 2rem 2rem;
+  }
+  .short-list h2 {
+    padding: 1rem 0;
+  }
+  .short-list hr {
+    margin: 1.75rem 0;
+  }
+}

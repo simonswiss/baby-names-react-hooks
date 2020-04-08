@@ -8,13 +8,13 @@ import "./css/styles.css";
 
 // Components
 import App from "./App";
-import { NamesProvider } from "./providers/names";
+
+// Data
+import { names } from "./data";
 
 ReactDOM.render(
   <React.StrictMode>
-    <NamesProvider>
-      <App />
-    </NamesProvider>
+    <App names={names} />
   </React.StrictMode>,
   document.getElementById("root")
 );

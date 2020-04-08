@@ -1,10 +1,17 @@
 import React, { Fragment, useState } from "react";
 
-import { Footer } from "./components/footer";
 import { NamePicker } from "./components/name-picker";
-import { ResetSearch } from "./components/reset-search";
 import { Search } from "./components/search";
 import { ShortList } from "./components/short-list";
+
+/*
+<App>
+  <Search />
+  <ShortList />
+  <NamePicker />
+  <Footer />
+</App>
+*/
 
 function App({ names }) {
   const [searchValue, setSearchValue] = useState("");
@@ -13,7 +20,6 @@ function App({ names }) {
     <Fragment>
       <Search searchValue={searchValue} setSearchValue={setSearchValue} />
       <main>
-        <p>Hello</p>
         <ShortList
           names={names}
           shortList={shortList}
@@ -25,12 +31,7 @@ function App({ names }) {
           shortList={shortList}
           setShortList={setShortList}
         />
-        <ResetSearch
-          searchValue={searchValue}
-          setSearchValue={setSearchValue}
-        />
       </main>
-      <Footer />
     </Fragment>
   );
 }

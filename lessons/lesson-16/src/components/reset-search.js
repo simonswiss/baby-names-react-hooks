@@ -1,6 +1,10 @@
 import React from "react";
 
-export function ResetSearch({ searchValue, setSearchValue }) {
+import { useAppState } from "../providers/app-state";
+
+export function ResetSearch() {
+  const { searchValue, setSearchValue } = useAppState();
+
   if (!searchValue) {
     return null;
   }

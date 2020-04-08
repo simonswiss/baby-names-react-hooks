@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 
 import { Footer } from "./components/footer";
 import { NamePicker } from "./components/name-picker";
@@ -7,21 +7,37 @@ import { Search } from "./components/search";
 import { ShortList } from "./components/short-list";
 
 function App() {
+  const [searchValue, setSearchValue] = useState("");
+  const [shortList, setShortList] = useState([]);
   return (
     <Fragment>
-      <Search />
-      <NamesContainer />
+      <Search searchValue={searchValue} setSearchValue={setSearchValue} />
+      <NamesContainer
+        shortList={shortList}
+        setShortList={setShortList}
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
       <Footer />
     </Fragment>
   );
 }
 
-function NamesContainer() {
+function NamesContainer({
+  shortList,
+  setShortList,
+  searchValue,
+  setSearchValue
+}) {
   return (
     <main>
-      <ShortList />
-      <NamePicker />
-      <ResetSearch />
+      <ShortList shortList={shortList} setShortList={setShortList} />
+      <NamePicker
+        searchValue={searchValue}
+        shortList={shortList}
+        setShortList={setShortList}
+      />
+      <ResetSearch searchValue={searchValue} setSearchValue={setSearchValue} />
     </main>
   );
 }

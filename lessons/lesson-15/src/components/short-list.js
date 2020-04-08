@@ -1,12 +1,10 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 
 import { NamesList } from "./names-list";
-import { useNames } from "../providers/names";
-import { useAppState } from "../providers/app-state";
+import { NamesContext } from "../providers/names";
 
-export function ShortList() {
-  const names = useNames();
-  const { shortList, setShortList } = useAppState();
+export function ShortList({ shortList, setShortList }) {
+  const names = useContext(NamesContext);
 
   const shortListedNames = shortList.map(id => names[id]);
   function removeFromShortList(id) {
