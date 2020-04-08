@@ -1,20 +1,18 @@
-import React from "react";
-
-import { names } from "../data";
+import React, { useContext } from "react";
 
 import { NamesList } from "./names-list";
-import { useShortList } from "../context/short-list";
-import { useSearch } from "../context/search";
+import { NamesContext } from "../providers/names";
 
-export function NamePicker() {
-  const { shortList, setShortList } = useShortList();
-  const { searchValue } = useSearch();
+export function NamePicker({ searchValue, shortList, setShortList }) {
+  const names = useContext(NamesContext);
   const filteredNames = names
-    .filter(entry => entry.name.toLowerCase().includes(searchValue.toLowerCase()))
+    .filter(entry =>
+      entry.name.toLowerCase().includes(searchValue.toLowerCase())
+    )
     .filter(entry => !shortList.includes(entry.id));
   function addToShortList(id) {
     setShortList([...shortList, id]);
   }
 
-  return <NamesList names={filteredNames} onItemClick={addToShortList} />;
+  return <NamesList namesList={filteredNames} onItemClick={addToShortList} />;
 }

@@ -1,8 +1,6 @@
 import React from "react";
 
-import { names } from "../data";
-
-export function NamePicker() {
+export function NamePicker({ names, searchValue }) {
   return (
     <ul>
       {names.map(entry => (

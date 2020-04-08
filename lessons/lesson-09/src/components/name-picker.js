@@ -1,17 +1,18 @@
 import React from "react";
 
-import { names } from "../data";
-
-export function NamePicker({ searchValue }) {
+export function NamePicker({ names, searchValue, shortList, setShortList }) {
   const filteredNames = names.filter(entry =>
     entry.name.toLowerCase().includes(searchValue.toLowerCase())
   );
+  function addToShortList(id) {
+    setShortList([...shortList, id]);
+  }
 
   return (
     <ul>
       {filteredNames.map(entry => (
         <li className={entry.sex} key={entry.id}>
-          <button>{entry.name}</button>
+          <button onClick={() => addToShortList(entry.id)}>{entry.name}</button>
         </li>
       ))}
     </ul>

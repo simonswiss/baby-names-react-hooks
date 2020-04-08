@@ -12,12 +12,12 @@ import { Search } from "./components/search";
 </App>
 */
 
-function App() {
+function App({ names }) {
   const [searchValue, setSearchValue] = useState("");
   return (
     <Fragment>
-      <Search />
-      <NamePicker />
+      <Search searchValue={searchValue} setSearchValue={setSearchValue} />
+      <NamePicker names={names} searchValue={searchValue} />
     </Fragment>
   );
 }

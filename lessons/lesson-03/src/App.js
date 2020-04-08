@@ -1,8 +1,6 @@
 import React from "react";
 
-import { names } from "./data";
-
-function App() {
+function App({ names }) {
   return (
     <ul>
       {names.map(entry => (

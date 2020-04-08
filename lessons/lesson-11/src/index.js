@@ -9,9 +9,12 @@ import "./css/styles.css";
 // Components
 import App from "./App";
 
+// Data
+import { names } from "./data";
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App names={names} />
   </React.StrictMode>,
   document.getElementById("root")
 );

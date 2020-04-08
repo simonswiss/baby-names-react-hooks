@@ -12,11 +12,11 @@ import { Search } from "./components/search";
 </App>
 */
 
-function App() {
+function App({ names }) {
   return (
     <Fragment>
       <Search />
-      <NamePicker />
+      <NamePicker names={names} />
     </Fragment>
   );
 }

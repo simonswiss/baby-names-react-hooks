@@ -1,9 +1,6 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
-import { SearchContext } from "../context/search";
-
-export function Search() {
-  const { searchValue, setSearchValue } = useContext(SearchContext);
+export function Search({ searchValue, setSearchValue }) {
   const inputRef = useRef();
 
   useEffect(() => {

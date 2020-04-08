@@ -1,9 +1,10 @@
-/* ##### general ##### */
+/* ##### Base ##### */
 * {
   box-sizing: border-box;
 }
 main {
-  padding: 0 2rem;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
 }
 
 /* ##### Search ##### */
@@ -87,8 +88,8 @@ li > button:active {
   color: #fff;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
-.short-list h4 {
-  padding: 1rem 0;
+.short-list h2 {
+  padding: 0;
   font-weight: 400;
   font-size: 1.3rem;
   margin: 0;
@@ -97,25 +98,46 @@ li > button:active {
 .short-list hr {
   border-bottom: 0;
   border-top: solid 1px #e6e6e6;
-  margin: 1.75rem 0;
+  margin: 1rem 0;
+}
+
+/* ##### Reset button ##### */
+button.reset-search {
+  color: #3f6073;
+  background: #e9f2f8;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 99999px;
+  outline: none;
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+}
+button.reset-search:hover {
+  background: #dae8f1;
 }
 
 /* ##### Footer ##### */
 .credit {
-  padding: 1rem 2rem;
+  padding: 0 1rem 2rem;
   color: #b3b3b3;
 }
 .credit a {
   color: #3498db;
 }
-button.reset {
-  color: #247bb5;
-  border: none;
-  background: none;
-  outline: none;
-  border-bottom: solid 1px;
-  padding: 0.1rem 0;
-}
-button.reset:hover {
-  border-color: transparent;
+
+/* ##### Media queries ##### */
+@media screen and (min-width: 640px) {
+  main {
+    padding: 0 2rem;
+  }
+  .credit {
+    padding: 0 2rem 2rem;
+  }
+  .short-list h2 {
+    padding: 1rem 0;
+  }
+  .short-list hr {
+    margin: 1.75rem 0;
+  }
 }

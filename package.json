@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "cd lessons/lesson-FINAL && yarn start",
+    "start": "cd lessons/final-app && yarn start",
     "start:01": "cd lessons/lesson-01 && yarn start",
     "start:02": "cd lessons/lesson-02 && yarn start",
     "start:03": "cd lessons/lesson-03 && yarn start",
@@ -17,7 +17,8 @@
     "start:11": "cd lessons/lesson-11 && yarn start",
     "start:12": "cd lessons/lesson-12 && yarn start",
     "start:13": "cd lessons/lesson-13 && yarn start",
-    "start:14": "cd lessons/lesson-14 && yarn start"
+    "start:14": "cd lessons/lesson-14 && yarn start",
+    "start:15": "cd lessons/lesson-15 && yarn start"
   },
   "workspaces": [
     "lessons/*"

@@ -13,14 +13,25 @@ import { ShortList } from "./components/short-list";
 </App>
 */
 
-function App() {
+function App({ names }) {
   const [searchValue, setSearchValue] = useState("");
   const [shortList, setShortList] = useState([]);
   return (
     <Fragment>
       <Search searchValue={searchValue} setSearchValue={setSearchValue} />
-      <ShortList shortList={shortList} setShortList={setShortList} />
-      <NamePicker searchValue={searchValue} shortList={shortList} setShortList={setShortList} />
+      <main>
+        <ShortList
+          names={names}
+          shortList={shortList}
+          setShortList={setShortList}
+        />
+        <NamePicker
+          names={names}
+          searchValue={searchValue}
+          shortList={shortList}
+          setShortList={setShortList}
+        />
+      </main>
     </Fragment>
   );
 }

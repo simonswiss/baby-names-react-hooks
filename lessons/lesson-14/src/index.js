@@ -8,16 +8,13 @@ import "./css/styles.css";
 
 // Components
 import App from "./App";
-import { ShortListProvider } from "./context/short-list";
-import { SearchProvider } from "./context/search";
+import { NamesProvider } from "./providers/names";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ShortListProvider>
-      <SearchProvider>
-        <App />
-      </SearchProvider>
-    </ShortListProvider>
+    <NamesProvider>
+      <App />
+    </NamesProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

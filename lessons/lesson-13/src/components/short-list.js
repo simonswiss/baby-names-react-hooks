@@ -1,24 +1,25 @@
-import React, { Fragment, useContext } from "react";
-
-import { names } from "../data";
+import React, { Fragment } from "react";
 
 import { NamesList } from "./names-list";
 
-import { ShortListContext } from "../context/short-list";
-
-export function ShortList() {
-  const { shortList, setShortList } = useContext(ShortListContext);
+export function ShortList({ names, shortList, setShortList }) {
   const shortListedNames = shortList.map(id => names[id]);
-  const hasFavourites = shortList.length > 0;
   function removeFromShortList(id) {
     setShortList(shortList.filter(i => i !== id));
   }
+
+  const hasNames = shortListedNames.length > 0;
   return (
     <div className="short-list">
-      <h4>{hasFavourites ? "Your shortlist: " : "Click on a name to shortlist it..."}</h4>
-      {hasFavourites && (
+      <h2>
+        {hasNames ? "Your shortlist" : "Click on a name to shortlist it."}
+      </h2>
+      {hasNames && (
         <Fragment>
-          <NamesList names={shortListedNames} onItemClick={removeFromShortList} />
+          <NamesList
+            namesList={shortListedNames}
+            onItemClick={removeFromShortList}
+          />
           <hr />
         </Fragment>
       )}
