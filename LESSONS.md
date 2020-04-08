@@ -28,11 +28,11 @@ In this lesson, we make the Search input field focus on page load. To do this, w
 
 ### 8. Identify the need to elevate state to a parent component in React
 
-In this lesson, we look at our "component breakdown diagram" again. It becomes apparent that the state for the input field `search` value needs to also be available for the `NamesList` component. We therefore elevate that piece of state to their common parent (App.js), and pass it down to both components via props.
+In this lesson, we look at our "component breakdown diagram" again. It becomes apparent that the state for the input field `search` value needs to also be available for the `NamePicker` component. We therefore elevate that piece of state to their common parent (App.js), and pass it down to both components via props.
 
 ### 9. Filter a JavaScript array with JSX and the `Array.filter()` method
 
-In this lesson, we use application state to filter a list of names from a JavaScript array. When users type a search string in the `Search` component, the `NamesList` component re-renders with the updated list of names matching the search.
+In this lesson, we use application state to filter a list of names from a JavaScript array. When users type a search string in the `Search` component, the `NamePicker` component re-renders with the updated list of names matching the search.
 
 ### 10. Update state in React with the update function provided by the `useState` hook
 
