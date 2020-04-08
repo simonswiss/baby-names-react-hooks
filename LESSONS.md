@@ -50,10 +50,12 @@ In this lesson, we abstract a reusable `NamesList` component, that will render t
 
 In this lesson, we decide what markup should be rendered with ternary and logical operators inside our JSX. We want to control the shortlist title, and if there are no names in the `ShortList`, we don't want to render an empty `<ul>` tag in the DOM!
 
-### 14. Reduce "prop drilling" in React with the Context API
+### 14. Reset search and Footer
+
+### 15. Reduce "prop drilling" in React with the Context API
 
 In this lesson, we approach the concept of "prop drilling" and see how it can lead to maintenance pitfalls. By leveraging the Context API, we implement a context provider for our "search" and "shortlist" states. We then access that context where needed via the `useContext` hook.
 
-### 15. Improve developer experience for accessing context with a custom React hook
+### 16. Improve developer experience for accessing context with a custom React hook
 
 In this lesson, we create a custom hook that wraps the `useContext` hook and returns its value, as well as more useful error messaging if a context provider is missing. This simple addition brings very elegant ergonomics to access context from any component.

@@ -1,6 +1,6 @@
 # 9. Filter a JavaScript array with JSX and the `Array.filter()` method
 
-In this lesson, we use application state to filter a list of names from a JavaScript array. When users type a search string in the `Search` component, the `NamesList` component re-renders with the updated list of names matching the search.
+In this lesson, we use application state to filter a list of names from a JavaScript array. When users type a search string in the `Search` component, the `NamesPicker` component re-renders with the updated list of names matching the search.
 
 ## How to run this lesson?
 
